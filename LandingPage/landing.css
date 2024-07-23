@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px black;
+    position: relative;
+}
+
+.nav-center a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-center a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-button {
+    margin-left: auto;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    background: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    color: #FF1493;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url("images/tourism1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 30px;
+    position: relative;
+}
+
+.hero-msg {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 500px;
+}
+
+.hero-submsg {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    margin-left: 500px;
+}
+
+.hero-description {
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    max-width: 60%;
+    margin-left: 500px;
+    margin-right: 60px;
+}
+
+/* Box Section */
+.box-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 30px;
+    background: linear-gradient(45deg, #FF1493 60%, #FF1493 50%, #FF1493 40%, #FF1493 30%, #00BFFF 70%, #00BFFF 75%, #00BFFF 80%);
+    gap: 30px;
+}
+
+.box {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30%;
+    height: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 0px 0px 15px 0px;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #ff9800;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content p:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.footer-social a:hover {
+    color: #ff9800;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-center a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
+}
